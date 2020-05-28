@@ -10,3 +10,10 @@ test('测试数字的比较', () => {
   expect(value).toBe(5)
   expect(value).toEqual(5)
 })
+
+test('测试浮点数相加', () => {
+  const value = 0.1 + 0.2
+
+  // expect(value).toBe(0.3)  这句话会报错，因为浮点数有舍入误差
+  expect(value).toBeCloseTo(0.3)
+})
